@@ -42,7 +42,7 @@ h2 {
   margin: 0;
   text-transform: uppercase;
   font-size: var(--font-size-large);
-  margin: 0 0 .5em; /* 0 0 26px */
+  margin: 30 30 .5em; /* 0 0 26px */
   color: rgb(248, 245, 245);
   text-transform: uppercase;
   font-weight: normal;
@@ -83,7 +83,7 @@ button {
   border-radius: 5px;
   font-weight: bold;
   transition: color 1s, background-color 1s, border-color 1s;
-  
+
 }
 button:hover {
   color: #000;
@@ -119,7 +119,7 @@ button:active {
   background-repeat: no-repeat;
   background-blend-mode: lighten;
   box-shadow: 0 15px 15px 20px -120px rgba(19, 9, 9, 0.8);
-  
+
 }
 
 
@@ -235,7 +235,7 @@ img {
   color: rgb(250, 242, 242);
 }
 
-.start {  
+.start {
   background-image: url(../images/bigadv.jpg);
   background-position: center;
   background-size: cover;
@@ -266,7 +266,7 @@ img {
   background-position: bottom;
   background-size: auto;
   background-repeat: no-repeat;
-  
+
 }
 
 .lose a {
@@ -279,7 +279,7 @@ VIDEO CONTAINER
   body {
     background: royalblue;
   }
- 
+
   }
 @media (max-width: 900px) {
   body {
@@ -309,7 +309,7 @@ https://stackoverflow.com/questions/33667143/how-to-make-a-blinking-image-in-css
   100% {
       opacity:1;
   }
-} 
+}
 
 @-webkit-keyframes blink {
   0% {
@@ -333,7 +333,7 @@ https://stackoverflow.com/questions/33667143/how-to-make-a-blinking-image-in-css
   100% {
       opacity:1;
   }
-} 
+}
 /* Opera and prob css3 final iteration */
 @keyframes blink {
   0% {
@@ -345,7 +345,7 @@ https://stackoverflow.com/questions/33667143/how-to-make-a-blinking-image-in-css
   100% {
       opacity:1;
   }
-} 
+}
 .blink-image {
   -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
   -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */

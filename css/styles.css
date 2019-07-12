@@ -1,0 +1,354 @@
+/* Main styles */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+
+/* Variables */
+
+:root {
+  --color-win: rgb(109, 128, 112);
+  --color-lose: rgb(218, 240, 24);
+  --color-start: #5b85b7;
+  --color-neutral: #445069;
+  --color-neutral-light: #D2D2D2;
+  --color-keys: #37474F;
+  --color-keys-light: #E5E5E5;
+  --font-size-large: 60px;
+  --font-size-medium: 20px;
+  --transition: all .2s ease-in-out;
+}
+
+/* main */
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  background-position: center;
+  }
+
+body {
+  color: #878787;
+  margin: 0;
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+}
+
+li, ol, ul {
+  padding: 0;
+  display: inline-block;
+}
+/*http://markdotto.com/playground/3d-text/*/
+h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: var(--font-size-large);
+  margin: 0 0 .5em; /* 0 0 26px */
+  color: rgb(248, 245, 245);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 0 #ccc,
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #aaa,
+                 0 6px 1px rgba(0,0,0,.1),
+                 0 0 5px rgba(0,0,0,.1),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgba(0,0,0,.15);
+}
+
+h1 {
+  font-size: 30px;
+
+}
+
+button {
+  margin: 6px;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+
+  font-size: var(--font-size-medium);
+  border-radius: 5px;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  color: #fff;
+	background: #4a89ca;
+
+  cursor: pointer;
+  background: #f68181;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: color 1s, background-color 1s, border-color 1s;
+  
+}
+button:hover {
+  color: #000;
+  background-color: #000;
+  border-color: #000;
+  background: #f31708;
+  border-radius: 1em;
+}
+
+button:active {
+  background: #a33830;
+}
+
+
+#btn__reset {
+	width: 200px;
+  margin: 0 auto;
+  color: rgb(251, 246, 246);
+
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  max-height: 900px;
+  text-align: center;
+  background-image: linear-gradient(rgb(255, 255, 255), transparent 40%),
+  linear-gradient(0deg,#fff, transparent 30%), url('../images/dora-pictures-valentines-day-thumb.jpg');
+  background-size: 750px;
+  padding-bottom: 350px;
+  background-repeat: no-repeat;
+  background-blend-mode: lighten;
+  box-shadow: 0 15px 15px 20px -120px rgba(19, 9, 9, 0.8);
+  
+}
+
+
+.section {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 10px;
+  margin: auto;
+  max-width: 900px;
+}
+
+#phrase ul li{
+  background-color: rgb(32, 2, 49);
+  margin-top: 15px;
+}
+
+/* Title */
+
+.header {
+  color: #e05f1e;
+}
+
+
+/* Phrase */
+
+.letter {
+  font-size: var(--font-size-medium);
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  color: transparent;
+  background: #999797;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.space {
+  width: 15px;
+}
+img {
+  max-width: 100%;
+}
+.show {
+  color: #fff;
+  background-color: #4ac0d5;
+  font-size: 20px;
+  height: 65px;
+  width: 65px;
+  padding: 20px 1px 0 1px;
+  margin-right: 2px;
+  border-radius: 5px;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+
+/* Keyboard */
+
+.keyrow {
+  display: flex;
+  justify-content: center;
+}
+
+.chosen {
+  background: #f7f8f5;
+  border-radius: 5px;
+  font-size: var(--font-size-medium);
+  color: rgb(12, 11, 11);
+}
+
+.wrong {
+  background: #f83c0d;
+  color: rgb(151, 50, 10);
+}
+
+.btn__reset {
+  padding: 16px;
+  margin: 50px auto;
+  background: #f109b7;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: solid 4px rgba(240, 37, 37, 0.3);
+  border-right: solid 3px rgba(0, 0, 0, .3)
+}
+
+.btn__reset:active {
+  padding: 14px 16px 16px 14px;
+  border-bottom: solid 4px rgba(235, 24, 24, 0);
+  border-right: solid 3px rgba(17, 17, 11, 0);
+}
+
+
+/* Overlay */
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.title {
+  color: rgb(250, 242, 242);
+}
+
+.start {  
+  background-image: url(../images/bigadv.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.start a {
+  color: #fff;
+  background-color: yellow;
+}
+
+.win {
+  background-color: var(--color-win);
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-image: url(https://media.giphy.com/media/qvkiDE3xwRPdm/giphy.gif);
+  background-position-y: 120px;
+}
+
+.win a {
+  color: var(--color-win);
+}
+
+.lose {
+  background-color: #701807;
+  background-image: url(https://media.giphy.com/media/z4AG8WynSJHA4/giphy.gifhttps://media.giphy.com/media/qvkiDE3xwRPdm/giphy.gif);
+  background-position: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+  
+}
+
+.lose a {
+  color: var(--color-lose);
+}
+/****************
+VIDEO CONTAINER
+************/
+@media (min-width: 990px) {
+  body {
+    background: royalblue;
+  }
+ 
+  }
+@media (max-width: 900px) {
+  body {
+   background: darkred;
+  }
+}
+@media (min-width: 990px) and (max-width: 990px);
+  body {
+    background: rgb(241, 190, 239);
+  }
+  p {
+    color: white;
+  }
+
+/*
+https://stackoverflow.com/questions/33667143/how-to-make-a-blinking-image-in-css3
+*/
+
+/* Firefox old*/
+@-moz-keyframes blink {
+  0% {
+      opacity:1;
+  }
+  50% {
+      opacity:0;
+  }
+  100% {
+      opacity:1;
+  }
+} 
+
+@-webkit-keyframes blink {
+  0% {
+      opacity:1;
+  }
+  50% {
+      opacity:0;
+  }
+  100% {
+      opacity:1;
+  }
+}
+/* IE */
+@-ms-keyframes blink {
+  0% {
+      opacity:1;
+  }
+  50% {
+      opacity:0;
+  }
+  100% {
+      opacity:1;
+  }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+  0% {
+      opacity:1;
+  }
+  50% {
+      opacity:0;
+  }
+  100% {
+      opacity:1;
+  }
+} 
+.blink-image {
+  -moz-animation: blink normal 2s infinite ease-in-out; /* Firefox */
+  -webkit-animation: blink normal 2s infinite ease-in-out; /* Webkit */
+  -ms-animation: blink normal 2s infinite ease-in-out; /* IE */
+  animation: blink normal 2s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}

@@ -16,12 +16,19 @@
      - assign every 'qwerty button' an event listener for clicking on each button
   */ 
 
+
+
 $(document).ready(() => {
 
   let game;
   //<button id="btn__reset">Start Game</button>
   //the startGame() button will initiate the game once its clicked
   $("#btn__reset").click(() => {
+    openingTheme.pause();
+    openingTheme.currentTime = 0;
+    if (game != null) {
+      game.stopAllSounds();
+    }
     game = new Game();
     game.resetGameBoard();
     game.startGame();
@@ -32,6 +39,20 @@ $(document).ready(() => {
     const $target = $(e.target); //button that was clicked
     game.handleInteraction($target);
   });
+
+  const openingTheme = new Audio("sounds/Dora_the_Explorer.mp3");
+
+  openingTheme.loop = true;
+  const playPromise = openingTheme.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(_ => {
+      openingTheme.play();
+    })
+    .catch(error => {
+    });
+  }
+
 });
 
 //These were used for testing purposes

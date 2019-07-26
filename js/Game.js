@@ -61,6 +61,20 @@ class Game {
         this.winSound = new Audio("https://s3-us-west-2.amazonaws.com/s.cdpn.io/74196/win.mp3");
     }
 
+    stopSound(sound) {
+        sound.pause();
+        sound.currentTime = 0;
+    }
+    
+    playSound(sound) {
+        sound.play();
+    }
+
+    stopAllSounds() {
+        this.stopSound(this.loseSound);
+        this.stopSound(this.winSound);
+    }
+
 /*2019/07/07: YM
  
 */
@@ -94,6 +108,7 @@ class Game {
     Begins game by selecting a random phrase and displaying it to user
 */
     startGame() {
+
         $('#overlay').hide();
         this.activePhrase=this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
@@ -148,15 +163,6 @@ handleInteraction(button) {
     }
     
     };
-    
-stopSound(sound) {
-    sound.pause();
-    sound.currentTime = 0;
-}
-
-playSound(sound) {
-    sound.play();
-}
 
 /**
 * Checks for winning move
